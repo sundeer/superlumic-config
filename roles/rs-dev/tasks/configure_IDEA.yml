@@ -31,8 +31,3 @@
   shell: cp {{ temp_work_area }}/fonts/source-code-pro-2.010R-ro-1.030R-it/OTF/* /Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/fonts
   args:
     creates: /Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/fonts/SourceCodePro-Regular.otf
-
-- name: Install PyCharm
-  homebrew:
-    name: pycharm
-    state: present
