@@ -37,12 +37,12 @@ homebrew_packages:
     - ansible
     - cookiecutter
     - consul
-    - httpi
+    - httpie
     - vault
     - terraform
     - awscli
     - fabric
-    - zsh-competions
+    - zsh-competion
     - docker-completions
     - gnu-tar
     - golang
