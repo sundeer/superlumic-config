@@ -42,7 +42,7 @@ homebrew_packages:
     - terraform
     - awscli
     - fabric
-    - zsh-competion
+    - zsh-completion
     - docker-completions
     - gnu-tar
     - golang
