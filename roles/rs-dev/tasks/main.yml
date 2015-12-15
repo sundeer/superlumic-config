@@ -10,6 +10,7 @@
 - include: disable_vagrant_nopasswd_sudo.yml
 - include: set_user_preferences.yml
 - include: install_homebrew_packages.yml
+- include: git_setup.yml
 - include: set_system_name.yml
 - include: install_prezto.yml
 - include: set_user_shell.yml

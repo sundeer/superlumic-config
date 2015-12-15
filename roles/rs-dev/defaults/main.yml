@@ -14,9 +14,9 @@ zdotdir_path: '{{ dotfiles_path }}/{{ zdotdir }}'
 
 zsh_path: /usr/local/bin/zsh
 
-github:
+git:
     user_name: sundeer
-    email: sundeer@rhsjmm.com
+    user_email: sundeer@rhsjmm.com
 
 homebrew_taps:
     - homebrew/dupes
@@ -78,6 +78,7 @@ homebrew_casks:
     - omnifocus
     - bittorrent-sync
     - viscosity
+    - slack
 
 homebrew_fonts:
     - font-inconsolata
