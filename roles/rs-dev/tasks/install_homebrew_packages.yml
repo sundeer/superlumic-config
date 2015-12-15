@@ -2,7 +2,7 @@
 
 - name: Prepare Homebrew Install Location
   sudo: yes
-  file: 
+  file:
     dest: /usr/local
     state: directory
     owner: '{{ ansible_ssh_user }}'
@@ -12,8 +12,8 @@
   args:
     creates: /usr/local/bin/brew
 
-# - name: Update Homebrew
-#   homebrew: update_homebrew=yes
+- name: Update Homebrew
+  homebrew: update_homebrew=yes
 
 - name: Tap Homebrew Cask Repository
   homebrew_tap: name=caskroom/cask state=present
@@ -43,7 +43,7 @@
 #         homebrew_cask_opts: '--appdir=/applications'
 #       with_items: homebrew_casks
 
-#     - name: Disable NOPASSWD 
+#     - name: Disable NOPASSWD
 #       include: disable_nopasswd_sudo.yml sudo_nopasswd_user={{ ansible_ssh_user }}
 #   rescue:
 #     - name: Copy sudoers backup to /etc/sudoers
@@ -59,13 +59,9 @@
     homebrew_cask_opts: '--appdir=/applications'
   with_items: homebrew_casks
 
-- name: Disable NOPASSWD 
+- name: Disable NOPASSWD
   include: disable_nopasswd_sudo.yml sudo_nopasswd_user={{ ansible_ssh_user }}
 
 - name: Install Homebrew Fonts
   homebrew_cask: name={{ item }} state=present
   with_items: homebrew_fonts
-
-
-
-
