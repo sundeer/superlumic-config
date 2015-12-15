@@ -18,6 +18,10 @@ git:
     user_name: sundeer
     user_email: sundeer@rhsjmm.com
 
+github:
+    user_name: "{{ git.user_name }}"
+    user_email: "{{ git.user_email }}"
+
 homebrew_taps:
     - homebrew/dupes
     - caskroom/fonts
