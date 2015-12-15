@@ -51,6 +51,9 @@ homebrew_packages:
     - gnu-tar
     - golang
     - jq
+    - nvm
+    - neo4j
+    - rancher_compose
 
 homebrew_casks:
     # - seil

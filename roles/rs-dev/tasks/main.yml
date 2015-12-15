@@ -14,7 +14,7 @@
 - include: set_system_name.yml
 - include: install_prezto.yml
 - include: set_user_shell.yml
-- include: configure_IDEA.yml
+# - include: configure_IDEA.yml
 
 # - name: Install nvm
 #   shell: curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash
