@@ -5,14 +5,12 @@
   register: current_git_user_name
   changed_when: False
   ignore_errors: yes
-  ignore_warnings: yes
 
 - name: Register current git user.email
   shell: git config --global --get user.email
   register: current_git_user_email
   changed_when: False
   ignore_errors: yes
-  ignore_warnings: yes
 
 - name: Set git user.name
   shell: git config --global user.name {{git.user_name}}
