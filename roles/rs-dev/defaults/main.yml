@@ -49,7 +49,7 @@ homebrew_packages:
     - jq
 
 homebrew_casks:
-    - seil
+    # - seil
     - atom
     - diffmerge
     - sourcetree
@@ -61,7 +61,6 @@ homebrew_casks:
     - vagrant
     - vagrant-manager
     - vmware-fusion
-    - vmware-appcatalyst
     - virtualbox
     - dash
     - iterm2
@@ -75,6 +74,7 @@ homebrew_casks:
     - dockertoolbox
     - pycharm
     - rubymine
+    - webstorm
     - omnifocus
     - bittorrent-sync
     - viscosity
