@@ -2,12 +2,15 @@
 
 - name: Set ComputerName to {{ system_name }}
   command: scutil --set ComputerName {{ system_name }}
-  sudo: yes
+  become: yes
+  when: ansible_hostname != system_name
 
 - name: Set HostName to {{ system_name }}
   command: scutil --set HostName {{ system_name }}
-  sudo: yes
+  become: yes
+  when: ansible_hostname != system_name
 
 - name: Set LocalHostName to {{ system_name }}
   command: scutil --set LocalHostName {{ system_name }}
   sudo: yes
+  when: ansible_hostname != system_name
