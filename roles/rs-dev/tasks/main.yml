@@ -1,0 +1,26 @@
+---
+
+- name: Create Temp Work Area
+  file:
+    path: '{{ temp_work_area }}'
+    state: directory
+    mode: '0755'
+    owner: '{{ user_name }}'
+
+- include: disable_vagrant_nopasswd_sudo.yml
+- include: set_user_preferences.yml
+- include: install_homebrew_packages.yml
+- include: set_system_name.yml
+- include: install_prezto.yml
+- include: set_user_shell.yml
+- include: configure_IDEA.yml
+
+# - name: Install nvm
+#   shell: curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash
+#     args:
+#       creates: /home/{{ ansible_user_id }}/.nvm/nvm.sh
+
+- name: Remove Temp Work Area
+  file:
+    name: '{{ temp_work_area }}'
+    state: absent
