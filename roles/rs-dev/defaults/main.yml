@@ -42,8 +42,8 @@ homebrew_packages:
     - terraform
     - awscli
     - fabric
-    - zsh-completion
-    - docker-completions
+    - zsh-completions
+    - docker-completion
     - gnu-tar
     - golang
     - jq
