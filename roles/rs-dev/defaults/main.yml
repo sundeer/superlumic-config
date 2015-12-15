@@ -53,7 +53,7 @@ homebrew_packages:
     - jq
     - nvm
     - neo4j
-    - rancher_compose
+    - rancher-compose
 
 homebrew_casks:
     # - seil
