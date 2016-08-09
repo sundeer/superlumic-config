@@ -1,31 +1,25 @@
 ---
 
-- name: Register current ComputerName
-  command: scutil --get ComputerName
-  register: computername
-  changed_when: False
-
-- name: Register current HostName
-  command: scutil --get HostName
-  register: hostname
-  changed_when: False
-
-- name: Register current LocalHostName
-  command: scutil --get LocalHostName
-  register: localhostname
-  changed_when: False
-
 - name: Set ComputerName to {{ system_name }}
   command: scutil --set ComputerName {{ system_name }}
   become: yes
-  when: computername.stdout != system_name
+  when: ansible_hostname != system_name
 
 - name: Set HostName to {{ system_name }}
   command: scutil --set HostName {{ system_name }}
   become: yes
-  when: hostname.stdout != system_name
+  when: ansible_hostname != system_name
 
 - name: Set LocalHostName to {{ system_name }}
   command: scutil --set LocalHostName {{ system_name }}
-  sudo: yes
-  when: localhostname.stdout != system_name
+  become: yes
+  when: ansible_hostname != system_name
+
+- name: Set netbios name
+  become: yes
+  osx_defaults:
+    domain: com.apple.smb.server
+    key: NetBIOSName
+    type: string
+    value: "{{ system_name }}"
+    state: present
