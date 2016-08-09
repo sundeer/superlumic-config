@@ -5,7 +5,7 @@
   file:
     dest: /usr/local
     state: directory
-    owner: '{{ ansible_ssh_user }}'
+    owner: '{{ ansible_user }}'
 
 - name: Install Homebrew
   shell: curl -L https://github.com/Homebrew/homebrew/tarball/master | tar xz --strip 1 -C /usr/local
@@ -38,7 +38,7 @@
 
 # - block:
 #     - name: Enable NOPASSWD
-#       include: enable_nopasswd_sudo.yml sudo_nopasswd_user={{ ansible_ssh_user }}
+#       include: enable_nopasswd_sudo.yml sudo_nopasswd_user={{ ansible_user }}
 
 #     - name: install homebrew casks
 #       homebrew_cask: name={{ item }} state=present
@@ -47,14 +47,14 @@
 #       with_items: homebrew_casks
 
 #     - name: Disable NOPASSWD
-#       include: disable_nopasswd_sudo.yml sudo_nopasswd_user={{ ansible_ssh_user }}
+#       include: disable_nopasswd_sudo.yml sudo_nopasswd_user={{ ansible_user }}
 #   rescue:
 #     - name: Copy sudoers backup to /etc/sudoers
 #       sudo: yes
 #       command: cp {{ temp_work_area }}/sudoers.bak /etc/sudoers
 
 - name: Enable NOPASSWD
-  include: enable_nopasswd_sudo.yml sudo_nopasswd_user={{ ansible_ssh_user }}
+  include: enable_nopasswd_sudo.yml sudo_nopasswd_user={{ ansible_user }}
 
 - name: Install Homebrew Casks
   homebrew_cask: name={{ item }} state=present
@@ -63,7 +63,7 @@
   with_items: homebrew_casks
 
 - name: Disable NOPASSWD
-  include: disable_nopasswd_sudo.yml sudo_nopasswd_user={{ ansible_ssh_user }}
+  include: disable_nopasswd_sudo.yml sudo_nopasswd_user={{ ansible_user }}
 
 - name: Install Homebrew Fonts
   homebrew_cask: name={{ item }} state=present
