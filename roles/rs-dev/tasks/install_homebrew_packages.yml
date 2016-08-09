@@ -15,11 +15,14 @@
 - name: Update Homebrew
   homebrew: update_homebrew=yes
 
-- name: Tap Homebrew Cask Repository
-  homebrew_tap: name=caskroom/cask state=present
+- name: Upgrade Homebrew
+  homebrew: upgrade_all=yes
 
 - name: Install Homebrew Cask
-  homebrew: name=brew-cask state=present
+  homebrew_tap: name=brew-cask state=present
+
+- name: Install Homebrew Services
+  homebrew_tap: tap=homebrew/services
 
 - name: Tap Homebrew repositories
   homebrew_tap: tap={{ item }}

@@ -35,7 +35,6 @@ homebrew_packages:
     - openssl
     - zsh
     - pyenv
-    - pyenv-virtualenv
     - packer
     - tree
     - ansible
@@ -49,41 +48,35 @@ homebrew_packages:
     - zsh-completions
     - docker-completion
     - gnu-tar
-    - golang
     - jq
     - nvm
     - neo4j
     - rancher-compose
+    - coreutils
 
 homebrew_casks:
     # - seil
     - atom
     - diffmerge
-    - sourcetree
     - 1password
     - alfred
     - google-chrome
     - firefox
     - dropbox
     - vagrant
-    - vagrant-manager
     - vmware-fusion
     - virtualbox
     - dash
     - iterm2
-    - jewelrybox
     - xquartz
     - sequel-pro
     - spideroakone
     - tower
     - wireshark
     - kaleidoscope
-    - dockertoolbox
     - pycharm
-    - rubymine
     - webstorm
     - omnifocus
-    - bittorrent-sync
     - viscosity
     - slack
 
