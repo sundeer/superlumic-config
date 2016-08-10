@@ -3,9 +3,6 @@
 install_path: /usr/local/opt
 temp_work_area: /tmp/temp_work_area
 
-user_name: rs
-system_name: "{{ user_name }}-mac"
-
 dotfiles_dir: dotfiles
 zdotdir: zdotdir
 
