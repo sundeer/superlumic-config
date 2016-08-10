@@ -19,6 +19,9 @@
     force: yes
     track_submodules: yes
 
+- name: Enable NOPASSWD
+  include: enable_nopasswd_sudo.yml sudo_nopasswd_user={{ user_name }}
+
 - name: Set Location of ZDOTDIR
   template:
     src: zshenv.j2
@@ -26,6 +29,9 @@
     mode: '0444'
     owner: root
     group: wheel
+
+- name: Disable NOPASSWD
+  include: disable_nopasswd_sudo.yml sudo_nopasswd_user={{ user_name }}
 
 - name: Link Prezto Zsh Dot Files to ZDOTDIR
   file:
