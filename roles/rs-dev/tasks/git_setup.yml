@@ -13,9 +13,15 @@
   ignore_errors: yes
 
 - name: Set git user.name
-  shell: git config --global user.name {{git.user_name}}
-  when: current_git_user_name.stdout != "{{git.user_name}}"
+  git_config:
+    name: user.name
+    value: '{{ git.user_name }}'
+    scope: global
+  when: current_git_user_name.stdout != {{ git.user_name }}
 
 - name: Set git user.email
-  shell: git config --global user.email {{git.user_email}}
-  when: current_git_user_email.stdout != "{{git.user_email}}"
+  git_config:
+    name: user.email
+    value: '{{ git.user_email }}'
+    scope: global
+  when: current_git_user_email.stdout != {{ git.user_email }}
