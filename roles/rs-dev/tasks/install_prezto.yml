@@ -20,13 +20,13 @@
     track_submodules: yes
 
 - name: Set Location of ZDOTDIR
-  sudo: yes
+  become: true
   template:
     src: zshenv.j2
     dest: /etc/zshenv
     mode: '0444'
     owner: root
-    group: 'wheel'
+    group: wheel
 
 - name: Link Prezto Zsh Dot Files to ZDOTDIR
   file:

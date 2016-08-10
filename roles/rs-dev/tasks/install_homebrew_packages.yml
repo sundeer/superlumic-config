@@ -57,11 +57,11 @@
   homebrew_cask: name={{ item }} state=present
   environment:
     homebrew_cask_opts: '--appdir=/applications'
-  with_items: homebrew_casks
+  with_items: "{{ homebrew_casks }}"
 
 - name: Disable NOPASSWD
   include: disable_nopasswd_sudo.yml sudo_nopasswd_user={{ user_name }}
 
 - name: Install Homebrew Fonts
   homebrew_cask: name={{ item }} state=present
-  with_items: homebrew_fonts
+  with_items: "{{ homebrew_fonts }}"
