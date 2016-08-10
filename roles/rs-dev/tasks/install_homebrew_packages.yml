@@ -50,8 +50,8 @@
 #       sudo: yes
 #       command: cp {{ temp_work_area }}/sudoers.bak /etc/sudoers
 
-- name: Enable NOPASSWD
-  include: enable_nopasswd_sudo.yml sudo_nopasswd_user={{ user_name }}
+# - name: Enable NOPASSWD
+#   include: enable_nopasswd_sudo.yml sudo_nopasswd_user={{ user_name }}
 
 - name: Install Homebrew Casks
   homebrew_cask: name={{ item }} state=present
@@ -59,8 +59,8 @@
     homebrew_cask_opts: '--appdir=/applications'
   with_items: "{{ homebrew_casks }}"
 
-- name: Disable NOPASSWD
-  include: disable_nopasswd_sudo.yml sudo_nopasswd_user={{ user_name }}
+# - name: Disable NOPASSWD
+#   include: disable_nopasswd_sudo.yml sudo_nopasswd_user={{ user_name }}
 
 - name: Install Homebrew Fonts
   homebrew_cask: name={{ item }} state=present
