@@ -8,7 +8,7 @@
     owner: '{{ user_name }}'
 
 - name: Install Homebrew
-  shell: curl -L https://github.com/Homebrew/homebrew/tarball/master | tar xz --strip 1 -C /usr/local
+  shell: ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   args:
     creates: /usr/local/bin/brew
 
