@@ -20,7 +20,6 @@
     track_submodules: yes
 
 - name: Set Location of ZDOTDIR
-  become: true
   template:
     src: zshenv.j2
     dest: /etc/zshenv
