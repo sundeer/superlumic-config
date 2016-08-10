@@ -3,14 +3,14 @@
 install_path: /usr/local/opt
 temp_work_area: /tmp/temp_work_area
 
-user_name: '{{ ansible_user }}'
-system_name: '{{ user_name }}-mac'
+user_name: rs
+system_name: "{{ user_name }}-mac"
 
 dotfiles_dir: dotfiles
 zdotdir: zdotdir
 
-dotfiles_path: '{{ ansible_user_dir }}/{{ dotfiles_dir }}'
-zdotdir_path: '{{ dotfiles_path }}/{{ zdotdir }}'
+dotfiles_path: "~/{{ dotfiles_dir }}"
+zdotdir_path: "{{ dotfiles_path }}/{{ zdotdir }}"
 
 zsh_path: /usr/local/bin/zsh
 

@@ -11,7 +11,6 @@
     - '{{ osx_defaults }}'
     - '{{ defaults }}'
 
-
 # killall command requires double quoted whitespaces
 - name: Relaunch applications
   command: killall "{{ item }}"
