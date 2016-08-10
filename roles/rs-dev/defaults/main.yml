@@ -31,6 +31,7 @@ homebrew_packages:
     - wget
     - openssl
     - zsh
+    - zsh-completions
     - pyenv
     - packer
     - tree
@@ -42,14 +43,13 @@ homebrew_packages:
     - terraform
     - awscli
     - fabric
-    - zsh-completions
     - docker-completion
     - gnu-tar
     - jq
     - nvm
-    - neo4j
     - rancher-compose
     - coreutils
+    - kubernetes-cli
 
 homebrew_casks:
     # - seil
@@ -67,7 +67,6 @@ homebrew_casks:
     - iterm2
     - xquartz
     - sequel-pro
-    - spideroakone
     - tower
     - wireshark
     - kaleidoscope
