@@ -228,14 +228,10 @@ osx_defaults:
 
     - domain: com.apple.screensaver
       defaults:
-        # # Require password immediately after sleep or screen saver begins
-        # - key: askForPassword
-        #   type: int
-        #   value: 1
-
-        - key: askForPasswordDelay
+        # Require password immediately after sleep or screen saver begins
+        - key: askForPassword
           type: int
-          value: 0
+          value: 1
 
     # - domain: /Library/Preferences/com.apple.windowserver
     #   defaults:
