@@ -23,10 +23,10 @@
 #   include: enable_nopasswd_sudo.yml sudo_nopasswd_user={{ user_name }}
 
 - name: Set Location of ZDOTDIR
+  become: true
+  become_user: root
+  become_method: sudo
   template:
-    become: true
-    become_user: root
-    become_method: sudo
     src: zshenv.j2
     dest: /etc/zshenv
     mode: '0444'
