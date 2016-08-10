@@ -6,6 +6,23 @@
   vars:
     user_name: travis
     system_name: "{{ user_name }}-mac"
+
+    homebrew_packages:
+        - git
+        - git-flow
+        - openssl
+        - zsh
+        - cookiecutter
+        - zsh-completions
+        - coreutils
+
+    homebrew_casks:
+        - atom
+        - pycharm
+
+    homebrew_fonts:
+        - font-inconsolata
+        - font-source-code-pro
     
   roles:
     - rs-dev

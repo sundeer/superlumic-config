@@ -3,5 +3,9 @@
 - hosts: localhost
   connection: local
 
+  vars:
+    user_name: rs
+    system_name: "{{ user_name }}-mac"
+
   roles:
     - rs-dev

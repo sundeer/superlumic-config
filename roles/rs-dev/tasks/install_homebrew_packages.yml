@@ -15,9 +15,6 @@
 - name: Update Homebrew
   homebrew: update_homebrew=yes
 
-- name: Upgrade Homebrew
-  homebrew: upgrade_all=yes
-
 - name: Install Homebrew Cask
   homebrew_tap: name=brew-cask state=present
 
