@@ -165,6 +165,11 @@ osx_defaults:
           type: bool
           value: 'true'
 
+        # Show Status bar
+        - key: ShowStatusBar
+          type: bool
+          value: 'true'
+
     - domain: NSGlobalDomain
       defaults:
         # Set fast keyboard repeat rate
@@ -329,3 +334,10 @@ osx_defaults:
         - key: ShowDebugMenu
           type: bool
           value: 'true'
+
+    - domain: com.apple.loginwindow
+      defaults:
+        # Disable 'Reopen windows when logging back in' by default
+        - key: TALLogoutSaveState
+          type: bool
+          value: 'false'
