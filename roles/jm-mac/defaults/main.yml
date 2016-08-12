@@ -3,14 +3,6 @@
 install_path: /usr/local/opt
 temp_work_area: /tmp/temp_work_area
 
-dotfiles_dir: dotfiles
-zdotdir: zdotdir
-
-dotfiles_path: "~/{{ dotfiles_dir }}"
-zdotdir_path: "{{ dotfiles_path }}/{{ zdotdir }}"
-
-zsh_path: /usr/local/bin/zsh
-
 git:
     user_name: sundeer
     user_email: sundeer@rhsjmm.com
@@ -26,60 +18,20 @@ homebrew_taps:
 
 homebrew_packages:
     - git
-    - git-flow
-    - direnv
-    - wget
     - openssl
-    - zsh
-    - zsh-completions
-    - pyenv
-    - packer
-    - tree
-    - cookiecutter
-    - consul
-    - httpie
-    - vault
-    - terraform
-    - awscli
-    - fabric
-    - docker-completion
-    - gnu-tar
-    - jq
-    - nvm
-    - rancher-compose
     - coreutils
-    - kubernetes-cli
 
 homebrew_casks:
-    - seil
-    - atom
-    - diffmerge
     - 1password
     - alfred
     - google-chrome
     - firefox
     - dropbox
-    - vagrant
-    - vmware-fusion
-    - virtualbox
-    - dash
     - iterm2
-    - xquartz
-    - sequel-pro
-    - tower
-    - wireshark
-    - kaleidoscope
-    - pycharm
-    - webstorm
     - omnifocus
-    - airvpn
     - viscosity
     - slack
-    - crashplan
-
-homebrew_fonts:
-    - font-inconsolata
-    - font-source-code-pro
+    - arq
 
 osx_defaults:
     - domain: com.apple.dock
@@ -149,12 +101,12 @@ osx_defaults:
         # Disable the warning when changing a file extension
         - key: FXEnableExtensionChangeWarning
           type: bool
-          value: 'false'
+          value: 'true'
 
         # Disable the warning before emptying the Trash
         - key: WarnOnEmptyTrash
           type: bool
-          value: 'false'
+          value: 'true'
 
         # Empty Trash securely by default
         - key: EmptyTrashSecurely
@@ -164,7 +116,7 @@ osx_defaults:
         # Show hidden files
         - key: AppleShowAllFiles
           type: bool
-          value: 'true'
+          value: 'false'
 
         # Show Status bar
         - key: ShowStatusBar
@@ -174,14 +126,14 @@ osx_defaults:
     - domain: NSGlobalDomain
       defaults:
         # Set fast keyboard repeat rate
-        - key: KeyRepeat
-          type: int
-          value: 0
-
-        # Show all filename extensions
-        - key: AppleShowAllFiles
-          type: int
-          value: 40
+        # - key: KeyRepeat
+        #   type: int
+        #   value: 0
+        #
+        # # Show all filename extensions
+        # - key: AppleShowAllFiles
+        #   type: int
+        #   value: 40
 
         # Double-click a window's title bar to minimize (true|false|YES|NO)
         - key: AppleMiniaturizeOnDoubleClick
@@ -195,9 +147,9 @@ osx_defaults:
           value: 3
 
         # Enable subpixel font rendering on non-Apple LCDs
-        - key: AppleFontSmoothing
-          type: int
-          value: 1
+        # - key: AppleFontSmoothing
+        #   type: int
+        #   value: 1
 
     - domain: com.apple.menuextra.clock
       defaults:
@@ -223,9 +175,9 @@ osx_defaults:
     - domain: com.apple.LaunchServices
       defaults:
         # Disable the “Are you sure you want to open this application?” dialog
-        - key: LSQuarantine
-          type: bool
-          value: 'false'
+        # - key: LSQuarantine
+        #   type: bool
+        #   value: 'false'
 
     - domain: com.apple.screensaver
       defaults:
@@ -323,14 +275,14 @@ osx_defaults:
     - domain: com.apple.appstore
       defaults:
         # Enable the WebKit Developer Tools in the Mac App Store
-        - key: WebKitDeveloperExtras
-          type: bool
-          value: 'true'
-
-        # Enable Debug Menu in the Mac App Store
-        - key: ShowDebugMenu
-          type: bool
-          value: 'true'
+        # - key: WebKitDeveloperExtras
+        #   type: bool
+        #   value: 'true'
+        #
+        # # Enable Debug Menu in the Mac App Store
+        # - key: ShowDebugMenu
+        #   type: bool
+        #   value: 'true'
 
     - domain: com.apple.loginwindow
       defaults:
