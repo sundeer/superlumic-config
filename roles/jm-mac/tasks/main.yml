@@ -1,0 +1,17 @@
+---
+
+- name: Create Temp Work Area
+  file:
+    path: '{{ temp_work_area }}'
+    state: directory
+    mode: '0755'
+    owner: '{{ user_name }}'
+
+- include: set_user_preferences.yml
+- include: install_homebrew_packages.yml
+- include: git_setup.yml
+
+- name: Remove Temp Work Area
+  file:
+    name: '{{ temp_work_area }}'
+    state: absent
