@@ -35,7 +35,6 @@ homebrew_packages:
     - pyenv
     - packer
     - tree
-    - ansible
     - cookiecutter
     - consul
     - httpie
@@ -52,7 +51,7 @@ homebrew_packages:
     - kubernetes-cli
 
 homebrew_casks:
-    # - seil
+    - seil
     - atom
     - diffmerge
     - 1password
@@ -73,8 +72,10 @@ homebrew_casks:
     - pycharm
     - webstorm
     - omnifocus
+    - airvpn
     - viscosity
     - slack
+    - crashplan
 
 homebrew_fonts:
     - font-inconsolata

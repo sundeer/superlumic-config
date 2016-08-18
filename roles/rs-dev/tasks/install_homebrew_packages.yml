@@ -29,10 +29,10 @@
   homebrew: name={{ item }} state=present
   with_items: '{{ homebrew_packages }}'
 
-- name: Backup /etc/sudoers file
-  sudo: yes
-  command: cp /etc/sudoers {{ temp_work_area }}/sudoers.bak
-
+# - name: Backup /etc/sudoers file
+#   sudo: yes
+#   command: cp /etc/sudoers {{ temp_work_area }}/sudoers.bak
+#
 # - block:
 #     - name: Enable NOPASSWD
 #       include: enable_nopasswd_sudo.yml sudo_nopasswd_user={{ user_name }}
