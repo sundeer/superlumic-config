@@ -155,7 +155,7 @@ osx_defaults:
 
         # Disable the warning before emptying the Trash
         - key: WarnOnEmptyTrash
-          type: bool
+          type: bool  
           value: 'false'
 
         # Empty Trash securely by default
@@ -165,7 +165,7 @@ osx_defaults:
 
         # Show hidden files
         - key: AppleShowAllFiles
-          type: boolean
+          type: string
           value: true
 
         # Show Status bar
