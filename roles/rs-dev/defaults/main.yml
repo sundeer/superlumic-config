@@ -76,6 +76,8 @@ homebrew_casks:
     - viscosity
     - slack
     - crashplan
+    - vlc
+    - netspot
 
 homebrew_fonts:
     - font-inconsolata
@@ -110,12 +112,12 @@ osx_defaults:
           value: 45
 
         # Set grid size for Launchpad icons
-        - key: springboard-columns
-          type: int
-          value: 9
-        - key: springboard-rows
-          type: int
-          value: 7
+        # - key: springboard-columns
+        #   type: int
+        #   value: 9
+        # - key: springboard-rows
+        #   type: int
+        #   value: 7
 
         # Minimize window into application icon (true|false|YES|NO)
         - key: minimize-to-application
@@ -213,12 +215,12 @@ osx_defaults:
           type: int
           value: 1
 
-    - domain: com.apple.universalaccess
-      defaults:
-        # Disable transparency in the menu bar and elsewhere on Yosemite
-        - key: reduceTransparency
-          type: bool
-          value: 'true'
+    # - domain: com.apple.universalaccess
+    #   defaults:
+    #     # Disable transparency in the menu bar and elsewhere on Yosemite
+    #     - key: reduceTransparency
+    #       type: bool
+    #       value: 'true'
 
     - domain: com.apple.LaunchServices
       defaults:
@@ -288,12 +290,12 @@ osx_defaults:
           type: int
           value: 2
 
-    - domain: com.googlecode.iterm2
-      defaults:
-        # Don’t display the annoying prompt when quitting iTerm
-        - key: PromptOnQuit
-          type: bool
-          value: 'false'
+    # - domain: com.googlecode.iterm2
+    #   defaults:
+    #     # Don’t display the annoying prompt when quitting iTerm
+    #     - key: PromptOnQuit
+    #       type: bool
+    #       value: 'false'
 
     - domain: com.apple.ActivityMonitor
       defaults:

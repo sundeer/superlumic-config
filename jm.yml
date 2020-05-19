@@ -4,7 +4,7 @@
   connection: local
 
   vars:
-    user_name: rs
+    user_name: jm
     system_name: "{{ user_name }}-mac"
 
   roles:
