@@ -165,8 +165,8 @@ osx_defaults:
 
         # Show hidden files
         - key: AppleShowAllFiles
-          type: bool
-          value: 'true'
+          type: boolean
+          value: true
 
         # Show Status bar
         - key: ShowStatusBar
@@ -178,7 +178,7 @@ osx_defaults:
         # Set fast keyboard repeat rate
         - key: KeyRepeat
           type: int
-          value: 0
+          value: 1
 
         # Show all filename extensions
         - key: AppleShowAllFiles
