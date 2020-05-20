@@ -20,9 +20,10 @@ github:
     user_email: "{{ git.user_email }}"
 
 homebrew_taps:
-    - homebrew/dupes
-    - caskroom/fonts
-    - homebrew/completions
+    - homebrew/cask-drivers
+    # - homebrew/dupes
+    # - caskroom/fonts
+    # - homebrew/completions
 
 homebrew_packages:
     - git
@@ -33,51 +34,48 @@ homebrew_packages:
     - zsh
     - zsh-completions
     - pyenv
-    - packer
-    - tree
-    - cookiecutter
-    - consul
     - httpie
-    - vault
     - terraform
     - awscli
-    - fabric
     - docker-completion
     - gnu-tar
-    - jq
     - nvm
-    - rancher-compose
     - coreutils
     - kubernetes-cli
+    - helm
+    - kubernetes-helm
+    - openssl
+    - yubico-piv-tool
+    - z
 
 homebrew_casks:
-    - seil
-    - atom
-    - diffmerge
-    - 1password
+    - visual-studio-code
+    - karabiner-elements
+    - jetbrains-toolbox
+    - docker
     - alfred
     - google-chrome
     - firefox
-    - dropbox
-    - vagrant
-    - vmware-fusion
+    # - dropbox
     - virtualbox
     - dash
     - iterm2
     - xquartz
-    - sequel-pro
     - tower
     - wireshark
     - kaleidoscope
-    - pycharm
-    - webstorm
     - omnifocus
-    - airvpn
     - viscosity
-    - slack
-    - crashplan
-    - vlc
     - netspot
+    - daisydisk
+    - keybase
+    - malwarebytes
+    - ubiquiti-unifi-controller
+    - yubico-authenticator
+    - yubico-yubikey-manager
+    - yubico-yubikey-personalization-gui
+    - yubico-yubikey-piv-manager
+
 
 homebrew_fonts:
     - font-inconsolata

@@ -1,25 +1,25 @@
 ---
 
-- name: Prepare Homebrew Install Location
-  sudo: yes
-  file:
-    dest: /usr/local
-    state: directory
-    owner: '{{ user_name }}'
+# - name: Prepare Homebrew Install Location
+#   sudo: yes
+#   file:
+#     dest: /usr/local
+#     state: directory
+#     owner: '{{ user_name }}'
 
-- name: Install Homebrew
-  shell: ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  args:
-    creates: /usr/local/bin/brew
+# - name: Install Homebrew
+#   shell: ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+#   args:
+#     creates: /usr/local/bin/brew
 
-- name: Update Homebrew
-  homebrew: update_homebrew=yes
+# - name: Update Homebrew
+#   homebrew: update_homebrew=yes
 
-- name: Install Homebrew Cask
-  homebrew_tap: tap=caskroom/cask state=present
+# - name: Install Homebrew Cask
+#   homebrew_tap: tap=caskroom/cask state=present
 
-- name: Install Homebrew Services
-  homebrew_tap: tap=homebrew/services
+# - name: Install Homebrew Services
+#   homebrew_tap: tap=homebrew/services
 
 - name: Tap Homebrew repositories
   homebrew_tap: tap={{ item }}
@@ -55,13 +55,13 @@
 
 - name: Install Homebrew Casks
   homebrew_cask: name={{ item }} state=present
-  environment:
-    homebrew_cask_opts: '--appdir=/applications'
+  # environment:
+  #   homebrew_cask_opts: '--appdir=/applications'
   with_items: "{{ homebrew_casks }}"
 
 # - name: Disable NOPASSWD
 #   include: disable_nopasswd_sudo.yml sudo_nopasswd_user={{ user_name }}
 
-- name: Install Homebrew Fonts
-  homebrew_cask: name={{ item }} state=present
-  with_items: "{{ homebrew_fonts }}"
+# - name: Install Homebrew Fonts
+#   homebrew_cask: name={{ item }} state=present
+#   with_items: "{{ homebrew_fonts }}"
